@@ -1,8 +1,86 @@
-body {
-  font-family: "Roboto", sans-serif;
+@keyframes aparecer {
+  0% {
+    transform: translateX(-100%);
+      opacity: 0; 
+  }
+  100% {
+    transform: translateX(0%); 
+      opacity: 1; 
+  }
 }
 
-#countries {
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#content {
+  margin: 0;
+  background: url(./assets/fondo.gif) no-repeat center;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position-y: 40px;
+  width: 95vw;
+  height: 100vh;
+}
+
+h1 {
+  color: azure;
+}
+
+main > h1 {
+  margin: 0 0 130px 0;
+}
+
+h2 {
+  margin: 0 0 0 10%;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: bisque;
+  width:fit-content;
+}
+
+#filter {
+  position: fixed;
+  top: 100px;
+}
+
+h2:hover, p:hover {
+  cursor: pointer;
+}
+
+#cont1 {
+  background-color: cornsilk;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  position: fixed;
+  left: 40%;
+  top: 100px;
+}
+
+.container {
+  background-color: cornsilk;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  position: fixed;
+}
+
+#cont2 {
+  left: 20%;
+  top: 250px;
+}
+
+#cont3 {
+  left: 10%;
+  top: 250px;
+}
+
+#section {
   display: flex;
   flex-wrap: wrap;
   margin: 55px;
@@ -11,17 +89,97 @@ body {
 
 .center {
   text-align: center;
+  color: azure;
 }
 
 .card {
   width: 200px;
-  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow: -8px -8px 27px #ffffff;
   border-radius: 16px;
   margin: 20px;
+  z-index: 0;
+  background-color: rgb(43, 43, 43);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #flag-image {
-  width: 100%;
+  width: 200px;
   height: 100px;
   border-radius: 16px 16px 0 0;
+}
+
+.hide {
+  display: none;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 376px) and (max-width: 500px) {
+  #cont1{
+    top: 65px;
+  }
+  #cont2{
+    top: 210px;
+  }
+  #cont3{
+    top: 210px;
+  }
+  #filter {
+    top: 65px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  #cont1{
+    left: 30%;
+    top: 65px;
+  }
+  #cont2{
+    left: 50%;
+    top: 65px;
+  }
+  #cont3{
+    left: 50%;
+    top: 155px;
+  }
+  #filter {
+    top: 65px;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 1200px) {
+  #cont1{
+    left: 21%;
+    top: 65px;
+  }
+  #cont2{
+    left: 35%;
+    top: 65px;
+  }
+  #cont3{
+    left: 35%;
+    top: 155px;
+  }
+  #filter {
+    top: 65px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #cont1{
+    left: 17%;
+    top: 65px;
+  }
+  #cont2{
+    left: 25%;
+    top: 65px;
+  }
+  #cont3{
+    left: 25%;
+    top: 155px;
+  }
+  #filter {
+    top: 65px;
+  }
 }

@@ -4,17 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Countries</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./assets/globe.png" type="image/x-icon">
   </head>
   <body>
-    <h1 id="title" class="center">Countries of the World 🌎</h1>
-    <div id="countries"></div>
+    <section id="content">
+      <main>
+      <h1 id="title" class="center">Countries of the World 🌎</h1>
+      <div id="countries">
+
+      </div>
+    </main>
+    <aside>
+      <h2 id="filter">Filter:</h2>
+      <section class="hide" id="cont1">
+        <p id="continent"><b>Continent:</b></p>
+        <p id="z"><b>Z-A</b></p>
+        <p id="starts"><b>Starts with:</b></p>
+      </section>
+      <section id="cont2" class="hide container">
+        <form id="continentes">
+          <select name="continente" id="continente" required>
+            <option value="Africa">Africa</option>
+            <option value="Americas">America</option>
+            <option value="Antarctic">Antarctica</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+      <section class="hide container" id="cont3">
+        <form id="letra">
+          <input type="text" name="letraUnica" id="letraUnica" required maxlength="1" placeholder="Introduce a letter">
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+    </aside>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./index.js"></script>
   </body>
 </html>
+
