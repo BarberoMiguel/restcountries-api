@@ -23,7 +23,7 @@ body {
   background-attachment: fixed;
   background-position-y: 40px;
   width: 95vw;
-  height: 100vh;
+  height: 100%;
 }
 
 h1 {
